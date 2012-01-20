@@ -1,4 +1,5 @@
 # Compile from theme folder: coffee -c -o js/ js/coffee/
+# Quicktags edited from Alex King's Quicktags plugin: http://alexking.org/projects/js-quicktags
 $ = jQuery
     
 class QuickTagButton
