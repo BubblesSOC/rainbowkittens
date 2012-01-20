@@ -1,0 +1,44 @@
+/*
+Theme Name: Rainbow Kittens
+Theme URI: http://bubblessoc.net
+Author: Bubs
+Author URI: http://bubblessoc.net/
+Description: Some skrit here.
+Version: 1.0
+*/
+
+.hidden {
+  display: none;
+}
+
+#archives .months {
+	display: none;
+}
+
+#archives .active .months {
+	display: block;
+}
+
+#quicktag-bold {
+  font-weight: bold;
+}
+
+#quicktag-italic {
+  font-style: italic;
+}
+
+#quicktag-underline {
+  text-decoration: underline;
+}
+
+#quicktag-delete {
+  text-decoration: line-through;
+}
+
+#quicktag-link {
+  
+}
+
+#quicktag-code {
+  font-family: monospace;
+}
