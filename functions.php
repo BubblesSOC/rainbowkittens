@@ -179,9 +179,20 @@ function rk_get_archives() {
 }
 
 function rk_recent_comments() {
-	$comments = get_comments('status=approve&number=3');
+  // Ref: wp-includes/comment.php : WP_Comment_Query->query()
+  // Can't use get_comments() because comments on protected posts should not be displayed
+  global $wpdb;
+  
+  if ( isset( $_COOKIE['wp-postpass_' . COOKIEHASH] ) )
+    $postpass_constraint = "(`post_password` = '' OR `post_password` = '".$_COOKIE['wp-postpass_' . COOKIEHASH]."')";
+  else
+    $postpass_constraint = "`post_password` = ''";
+    
+  $query = "SELECT `comment_ID` FROM ".$wpdb->comments." JOIN ".$wpdb->posts." ON ".$wpdb->posts.".`ID` = ".$wpdb->comments.".`comment_post_ID` WHERE `comment_approved` = '1' AND `post_status` = 'publish' AND $postpass_constraint ORDER BY `comment_date_gmt` DESC LIMIT 3";
+	$comments = $wpdb->get_results( $query );
 	
-	foreach ($comments as $comment) {
+	foreach ($comments as $comment_obj) {
+	  $comment = get_comment( $comment_obj->comment_ID );
 		echo "\t<li>" . get_avatar( $comment, 32 ) . "<br>";
 		comment_author_link( $comment->comment_ID );
 		
