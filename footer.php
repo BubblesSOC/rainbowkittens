@@ -10,6 +10,5 @@
 <!-- </footer> -->
 
 <?php wp_footer(); ?>
-<!--<script src="/mint/?js" type="text/javascript"></script>-->
 </body>
 </html>

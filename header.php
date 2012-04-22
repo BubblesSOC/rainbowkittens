@@ -4,13 +4,13 @@
  * @subpackage Rainbow_Kittens
  */
 ?><!DOCTYPE html>
-<html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="author" content="Bubs" />
-<meta name="description" content="<?php bloginfo("description"); ?>" />
-<?php rk_og_metadata(); ?>
+<meta name="author" content="Sidney Collins" />
+<?php rk_metadata(); ?>
+<?php ogp_metadata(); ?>
 <title><?php
 	/*
 	 * TO DO
@@ -33,31 +33,16 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
-<link rel="Shortcut Icon" href="http://www.bubblessoc.net/favicon.ico" />
+<link rel="Shortcut Icon" href="http://bubblessoc.net/favicon.ico" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="profile" href="http://microformats.org/profile/hcard" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<?php if ( is_single() ) : ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/stylesheets/jquery-ui-1.8.16.custom.css" />
-<?php endif; ?>
-<?php
-  wp_enqueue_script("jquery");
-  wp_enqueue_script("jquery-ui-core");
-  wp_enqueue_script("jquery-ui-dialog");
-  wp_head(); 
-?>
-<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr-2.0.6.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/wordpress.js"></script>
-<?php
-  # Only include when there are comments or there is a comment form
-  if ( is_single() && !post_password_required() && ( have_comments() || comments_open() ) ) : 
-?>
-<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/wordpress.comments.js"></script>
-<?php endif; ?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="fb-root"></div>
 
 <!-- <header> -->
 <div class="header" role="banner">

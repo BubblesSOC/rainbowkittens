@@ -42,3 +42,7 @@ Version: 1.0
 #quicktag-code {
   font-family: monospace;
 }
+
+.social-userinfo {
+  display: none;
+}
