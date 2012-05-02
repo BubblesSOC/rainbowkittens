@@ -55,9 +55,9 @@ function rk_parent_comment_link() {
 // UNFINISHED
 function rk_comment_meta( $comment, $args, $depth ) {
   $has_reply = false;
-  if (  ) {
+  if ( true ) {
     // Ref: get_comment_reply_link() : wp-includes/comment-template.php
-    $has_reply
+    $has_reply = true;
   }
   
   $has_quote = false;

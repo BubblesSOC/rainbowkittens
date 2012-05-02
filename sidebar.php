@@ -58,15 +58,6 @@
 	<!-- </aside> -->
 
 	<!-- <aside> -->
-	<div class="aside" id="lastfm" role="complementary">
-		<h2>Last.fm</h2>
-		<ul>
-			<li>Loading...</li>
-		</ul>
-	</div>
-	<!-- </aside> -->
-
-	<!-- <aside> -->
 	<div class="aside" id="flickr" role="complementary">
 		<h2>Flickr</h2>
 		<ul>
@@ -78,6 +69,15 @@
 	<!-- <aside> -->
 	<div class="aside" id="github" role="complementary">
 		<h2>Github</h2>
+		<ul>
+			<li>Loading...</li>
+		</ul>
+	</div>
+	<!-- </aside> -->
+	
+	<!-- <aside> -->
+	<div class="aside" id="tumblr" role="complementary">
+		<h2>Tumblr</h2>
 		<ul>
 			<li>Loading...</li>
 		</ul>

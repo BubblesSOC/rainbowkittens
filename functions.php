@@ -10,6 +10,7 @@ require('functions/functions.recent-comments.php');
 require('functions/functions.comment.php');
 require('functions/functions.comment-form.php');
 require('functions/functions.quoter.php');
+require('classes/OpenGraphProtocol.php');
  
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-formats', array('aside', 'link', 'image', 'quote', 'video', 'audio', 'chat') );
@@ -17,10 +18,10 @@ add_theme_support( 'post-thumbnails' );
 
 
 function rk_scripts() {
-  wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'rk_modernizer_js', get_template_directory_uri() . '/js/modernizr-2.0.6.min.js' );
-  wp_register_script( 'rk_wordpress_js',  get_template_directory_uri() . '/js/wordpress.js', array('jquery'), false, true );
-  wp_enqueue_script( 'rk_wordpress_js' );
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('rk_modernizer_js', get_template_directory_uri() . '/js/modernizr-2.0.6.min.js');
+  wp_register_script('rk_wordpress_js',  get_template_directory_uri() . '/js/wordpress.js', array('jquery'), false, true);
+  wp_enqueue_script('rk_wordpress_js');
   wp_localize_script( 'rk_wordpress_js', 'wpAjax', array('url' => admin_url('admin-ajax.php')) );
   
   // Only include when there are comments or there is a comment form
@@ -33,22 +34,6 @@ function rk_scripts() {
   // wp_enqueue_script( 'rk_mint_js', site_url() . '/mint/?js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'rk_scripts' );
-
-
-// SEO Friendly Meta Data
-// *TO DO*
-function rk_metadata() {
-  if ( is_single() ) :
-?>
-<meta name="description" content="<?php bloginfo("description"); ?>" />
-<meta name="keywords" content="" />
-<?
-  else :
-?>
-<meta name="description" content="<?php bloginfo("description"); ?>" />
-<?php
-  endif;
-}
 
 
 // Custom Smilies

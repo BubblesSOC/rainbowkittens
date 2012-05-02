@@ -19,9 +19,9 @@
 
   loadSocialWidget('#flickr ul', 'bsp-print-photos');
 
-  loadSocialWidget('#lastfm ul', 'bsp-print-tracks');
-
   loadSocialWidget('#github ul', 'bsp-print-repos');
+
+  loadSocialWidget('#tumblr ul', 'bsp-print-posts');
 
   htmlspecialchars = function(str) {
     return str.replace(/&(?!(#(X|x)?[0-9A-Fa-f]{2,5}|[A-Za-z]{2,8});)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');

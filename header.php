@@ -4,12 +4,12 @@
  * @subpackage Rainbow_Kittens
  */
 ?><!DOCTYPE html>
-<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<html class="no-js" lang="en" prefix="og: <?php ogp_namespace(); ?> fb: http://ogp.me/ns/fb#">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="author" content="Sidney Collins" />
-<?php rk_metadata(); ?>
+<meta name="description" content="<?php ogp_description(); ?>" />
 <?php ogp_metadata(); ?>
 <title><?php
 	/*

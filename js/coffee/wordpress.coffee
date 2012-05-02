@@ -9,8 +9,8 @@ loadSocialWidget = (selector, action) ->
 loadSocialWidget '#raptr ul', 'brp-print-games'
 loadSocialWidget '#twitter ul', 'bsp-print-tweets'
 loadSocialWidget '#flickr ul', 'bsp-print-photos'
-loadSocialWidget '#lastfm ul', 'bsp-print-tracks'
 loadSocialWidget '#github ul', 'bsp-print-repos'
+loadSocialWidget '#tumblr ul', 'bsp-print-posts'
 
 # twttr.anywhere (T) ->
 #   T('#twitter a.tweep').hovercards
