@@ -6,11 +6,12 @@ loadSocialWidget = (selector, action) ->
     $ ->
       $(selector).html html
     
+loadSocialWidget '#likes ul', 'bsp-print-likes'
+loadSocialWidget '#social-photos ul', 'bsp-print-social-photos'
 loadSocialWidget '#raptr ul', 'brp-print-games'
+loadSocialWidget '#pinterest ul', 'bsp-print-pins'
 loadSocialWidget '#twitter ul', 'bsp-print-tweets'
-loadSocialWidget '#flickr ul', 'bsp-print-photos'
 loadSocialWidget '#github ul', 'bsp-print-repos'
-loadSocialWidget '#tumblr ul', 'bsp-print-posts'
 
 # twttr.anywhere (T) ->
 #   T('#twitter a.tweep').hovercards

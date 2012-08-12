@@ -11,10 +11,28 @@ require('functions/functions.comment.php');
 require('functions/functions.comment-form.php');
 require('functions/functions.quoter.php');
 require('classes/OpenGraphProtocol.php');
+require('classes/widgets/Archives.php');
+require('classes/widgets/RecentComments.php');
  
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-formats', array('aside', 'link', 'image', 'quote', 'video', 'audio', 'chat') );
 add_theme_support( 'post-thumbnails' );
+
+
+function rk_widgets_init() {
+  register_sidebar(array(
+    'name'          => 'Main Sidebar',
+    'id'            => 'main-sidebar',
+    'before_widget' => '<div class="aside widget %2$s" id="%1$s" role="complementary">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>'
+  ));
+  
+  register_widget( 'RK_Archives_Widget' );
+  register_widget( 'RK_Recent_Comments_Widget' );
+}
+add_action( 'widgets_init', 'rk_widgets_init' );
 
 
 function rk_scripts() {

@@ -4,3 +4,5 @@ images/*
 js/quicktags_old.js
 rk_get_archives.php
 rk_recent_comments.php
+sidebar-no-widget.php
+dev/

@@ -23,7 +23,7 @@ if ( have_posts() ) : ?>
 	<!-- <article> -->
 	<div id="post-<?php the_ID(); ?>" <?php post_class("article"); ?> role="article">
 		<!-- <header> -->
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>" rel="bookmark" class="entry-permalink"><?php the_title(); ?></a></h2>
 			<p>Posted <abbr class="published" title="<?php the_time("c"); ?>"><?php time_since( get_the_time('U') ); ?></abbr></p>
 		<!-- </header> -->
 		

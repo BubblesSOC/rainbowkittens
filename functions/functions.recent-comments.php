@@ -6,7 +6,7 @@
  * @subpackage Rainbow_Kittens
  */
 
-function rk_recent_comments() {
+function rk_recent_comments( $count = 3 ) {
   
   // Exclude comments on protected posts
   // Filter Hook:
@@ -18,7 +18,7 @@ function rk_recent_comments() {
   $args = array(
     'status' => 'approve',
     'post_status' => 'publish',
-    'number' => 3
+    'number' => $count
   );
   $comments = get_comments($args);
 	

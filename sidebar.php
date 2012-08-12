@@ -6,6 +6,7 @@
 ?>
 	<hr />
 	
+<?php if ( !dynamic_sidebar('main-sidebar') ) : ?>
 	<!-- <aside> -->
 	<div class="aside" id="archives" role="complementary">
 		<h2>Archives</h2>
@@ -43,7 +44,7 @@
 	<div class="aside" id="raptr" role="complementary">
 		<h2>Raptr</h2>
 		<ul>
-			<li>Loading...</li>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
 		</ul>
 	</div>
 	<!-- </aside> -->
@@ -52,16 +53,16 @@
 	<div class="aside" id="twitter" role="complementary">
 		<h2>Twitter</h2>
 		<ul>
-			<li>Loading...</li>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
 		</ul>
 	</div>
 	<!-- </aside> -->
-
+	
 	<!-- <aside> -->
-	<div class="aside" id="flickr" role="complementary">
-		<h2>Flickr</h2>
+	<div class="aside" id="social-photos" role="complementary">
+		<h2>Social Photos</h2>
 		<ul>
-			<li>Loading...</li>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
 		</ul>
 	</div>
 	<!-- </aside> -->
@@ -70,17 +71,27 @@
 	<div class="aside" id="github" role="complementary">
 		<h2>Github</h2>
 		<ul>
-			<li>Loading...</li>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
 		</ul>
 	</div>
 	<!-- </aside> -->
 	
 	<!-- <aside> -->
-	<div class="aside" id="tumblr" role="complementary">
-		<h2>Tumblr</h2>
+	<div class="aside" id="pinterest" role="complementary">
+		<h2>Pinterest</h2>
 		<ul>
-			<li>Loading...</li>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
 		</ul>
 	</div>
 	<!-- </aside> -->
+	
+	<!-- <aside> -->
+	<div class="aside" id="likes" role="complementary">
+		<h2>Stuff I &hearts;</h2>
+		<ul>
+			<li><img src="<?php bloginfo('template_directory') ?>/images/ajax-loader.gif" alt="Loading..." /></li>
+		</ul>
+	</div>
+	<!-- </aside> -->
+<?php endif; ?>
 	
